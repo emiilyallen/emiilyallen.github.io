@@ -175,22 +175,21 @@
             <legend>Datos Publicación</legend>
 
             <div class="datos-publicacion">
-                <label for="titulo">Título</label>
-                <!-- Añadido required porque el título es obligatorio -->
-                <input type="text" name="titulo" id="titulo" placeholder="Título" maxlength="15" oninput="updateCounter('titulo', 15)" required>
+               
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Título" maxlength="15" oninput="updateCounter('titulo', 15)" required>
                 <span id="titulo-counter">0 / 15</span>
-
-
-                <label for="descripcion">Descripción</label>
-                <!-- Añadido required porque la descripción es obligatoria -->
-                <textarea name="descripcion" rows="4" cols="40" maxlength="120" oninput="updateCounter('descripcion', 120)" required></textarea>
+    
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" placeholder="Escribe aquí" maxlength="120" oninput="updateCounter('descripcion', 120)" required></textarea>
                 <span id="descripcion-counter">0 / 120</span>
 
             </div>
             
-
         </fieldset>
+
         <button type="submit">Enviar</button>
+        
     </form>
 
     <script src="script.js"></script>
