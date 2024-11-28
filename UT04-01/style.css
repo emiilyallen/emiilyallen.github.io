@@ -1,6 +1,6 @@
-/* Aplicación global */
+
 * {
-    box-sizing: border-box; /* Padding y border no afectan el tamaño total del elemento */
+    box-sizing: border-box; 
     margin: 0;
     padding: 0;
 }
@@ -171,4 +171,11 @@ button[type="submit"]:hover {
     background-color: #555; /* Fondo más claro al pasar el ratón */
 }
 
-
+span {
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: end;
+  }
