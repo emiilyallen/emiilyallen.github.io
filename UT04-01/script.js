@@ -6,20 +6,12 @@ const DOM = {
 }
 
 
-(function(){ 
-    DOM.frm.addEventListener("submit", (e) => {
-        e.preventDefault();  // Usa punto y coma, no coma
-        alert(DOM.titulo.validationMessage);  // Usa punto y coma, no coma
-    })
-})()
-
-
-// if (!nombre.validationMessage==""){
-
-// }
-
-
-
+// (function(){ 
+//     DOM.frm.addEventListener("submit", (e) => {
+//         e.preventDefault();  // Usa punto y coma, no coma
+//         alert(DOM.titulo.validationMessage);  // Usa punto y coma, no coma
+//     })
+// })()
 
 
 //funcion para contar el numero de caracteres de los campos 
@@ -33,11 +25,17 @@ function updateCounter(fieldId, maxLength) {
 
 
 //funcion para mostrar contraseña
+//la funcion que se autoejecuta se ve que no permite que esta funcione por eso la comenté 
 const checkbox = document.getElementById('showPasswd');
         const passwordInput = document.getElementById('password');
 
     checkbox.addEventListener('change', () => {
         passwordInput.type = checkbox.checked ? 'text' : 'password';
     });
+
+
+
+
+//funcion para manipular las aficiones que marque el usuario
 
 

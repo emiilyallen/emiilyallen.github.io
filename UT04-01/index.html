@@ -17,7 +17,7 @@
                 <div class="nombre">
                     <label for="nombre">Nombre de Usuario</label>
                     <!-- Añadido required porque es necesario un nombre de usuario -->
-                    <input type="text" name="nombre" id="UserName" placeholder="UserName" required><br>
+                    <input type="text" name="NombreUsuario" id="UserName" placeholder="NombreUsuario" required><br>
                 </div>
 
                 <div class="contraseña"> 
@@ -40,7 +40,7 @@
                     <div>
                         <label for="nombre">Nombre</label>
                         <!-- Añadido required porque es obligatorio ingresar un nombre -->
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                        <input type="text" name="Nombre" id="nombre" placeholder="Nombre" required>
                     </div>
 
 
@@ -48,7 +48,7 @@
 
                         <label for="nombre">Apellidos</label>
                         <!-- Añadido required porque los apellidos son obligatorios -->
-                        <input type="text" name="nombre" id="apellidos" placeholder="Apellidos" required>
+                        <input type="text" name="Apellidos" id="apellidos" placeholder="Apellidos" required>
 
                     </div>
 
@@ -57,7 +57,7 @@
                         
                         <label for="telephone">Teléfono</label>
                         <!-- Añadido required porque el teléfono es obligatorio -->
-                        <input type="number" name="telephone" id="telephone" placeholder="Ejem: (+34)922123123"  
+                        <input type="number" name="Telefono" id="telephone" placeholder="Ejem: (+34)922123123"  
                         pattern="^\(\+34\)\d{9}$" maxlength="14" required>
 
                     </div>
@@ -66,7 +66,7 @@
     
                         <label for="numero" min="0" max="4000">Código Postal</label>
                         <!-- Añadido required porque el código postal es necesario -->
-                        <input type="text" name="numero" id="codigo-postal" placeholder="38XXX" 
+                        <input type="text" name="CodigoPostal" id="codigo-postal" placeholder="38XXX" 
                         pattern="^\d{5}$" maxlength="5" required>
                         
                     </div>
@@ -77,14 +77,14 @@
                         
                     <div>
 
-                        <label for="DNI"> DNI/NIE</label>
-                        <select name="DNI" id="numero" required>
+                        <label for="TipoDocumento"> DNI/NIE</label>
+                        <select name="TipoDocumento" id="numero" required>
                             <option value="DNI" disabled selected>---</option>
                             <option value="DNI">DNI</option>
                             <option value="NIE">NIE</option>
                         </select>
                             <!-- Añadido required porque el DNI/NIE es obligatorio -->
-                        <input type="text" name="DNI" id="DNI" placeholder="DNI/NIE" 
+                        <input type="text" name="DniNie" id="DNI" placeholder="DNI/NIE" 
                         pattern="^[XYZ]?\d{7,8}[A-Z]$" maxlength="9" required>
                     
                     </div>
@@ -92,16 +92,16 @@
                     <div>
                         <p>Crear cuenta como:</p>
                         <!-- Añadido required para asegurar que se seleccione una opción -->
-                        <input type="radio" name="tipo de cuenta" value="Particular" required>Particular
-                        <input type="radio" name="tipo de cuenta" value="Empresa" required>Empresa
+                        <input type="radio" name="CuentaComo" value="Particular" required>Particular
+                        <input type="radio" name="CuentaComo" value="Empresa" required>Empresa
                     </div>
                     
 
                     <div>
                         
-                        <label for="año">Año de Nacimiento</label>
+                        <label for="AnioNacimiento">Año de Nacimiento</label>
                         <!-- Añadido required porque es necesario elegir un año -->
-                        <select name="año" id="año" required>
+                        <select name="AnioNacimiento" id="año" required>
                             <option value="2010">2010</option>
                             <option value="2009">2009</option>
                             <option value="2008">2008</option>
@@ -123,45 +123,48 @@
                 <div class="datos-personales3">
 
                     <p>Elige tus aficiones:</p>
+
+                    <input type="hidden" name="Aficiones"  id="aficiones" value="">
         
-                    <div class="aficiones"> 
+                    <div class="Aficiones"> 
 
                         <div>
-                            <label for="aficiones">Música</label>
-                            <input type="checkbox" name="aficiones" value="aficiones"> 
+                            <label for="aficiones1">Música</label>
+                            <input type="checkbox" id="Música"> 
 
                         </div>
 
                         <div>
-                            <label for="aficiones">Deporte</label>
-                            <input type="checkbox" name="aficiones" value="aficiones">
+                            <label for="aficiones2">Deporte</label>
+                            <input type="checkbox" id="Deporte">
 
                         </div>
 
                         <div>
-                            <label for="aficiones">Manualidades</label>
-                            <input type="checkbox" name="aficiones" value="aficiones"> 
+                            <label for="aficiones3">Manualidades</label>
+                            <input type="checkbox" id="Manualidades"> 
 
                         </div>
 
                         <div>
-                            <label for="aficiones">Artes</label>
-                            <input type="checkbox" name="aficiones" value="aficiones">
-
+                            <label for="aficiones4">Artes</label>
+                            <input type="checkbox" id="Artes">
                         </div>
 
                         <div>
                             
-                            <label for="aficiones">Videojuegos</label>
-                            <input type="checkbox" name="aficiones" value="aficiones"> 
+                            <label for="aficiones5">Videojuegos</label>
+                            <input type="checkbox" id="Videojuegos"> 
                         </div>
 
                         <div>
-                            <label for="aficiones">Lectura</label>
-                            <input type="checkbox" name="aficiones" value="aficiones">                    
+                            <label for="aficiones6">Lectura</label>
+                            <input type="checkbox" id="Lectura">
                         </div>
 
+
                     </div>
+
 
                 </div>
 
@@ -177,11 +180,11 @@
             <div class="datos-publicacion">
                
                 <label for="titulo">Título:</label>
-                <input type="text" id="titulo" name="titulo" placeholder="Título" maxlength="15" oninput="updateCounter('titulo', 15)" required>
+                <input type="text" id="titulo" name="PublicacionTitulo" placeholder="Título" maxlength="15" oninput="updateCounter('titulo', 15)" required>
                 <span id="titulo-counter">0 / 15</span>
     
                 <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" name="descripcion" placeholder="Escribe aquí" maxlength="120" oninput="updateCounter('descripcion', 120)" required></textarea>
+                <textarea id="descripcion" name="PublicacionDescripcion" placeholder="Escribe aquí" maxlength="120" oninput="updateCounter('descripcion', 120)" required></textarea>
                 <span id="descripcion-counter">0 / 120</span>
 
             </div>
