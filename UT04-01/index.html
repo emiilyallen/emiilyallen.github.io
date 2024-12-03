@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <form action="https://www.w3schools.com/action_page.php" method="post">
+    <form action="https://www.w3schools.com/action_page.php" method="post" id="frm" novalidate> 
         
         <fieldset class="campo1">
             <legend>Datos Usuario</legend>
@@ -17,7 +17,7 @@
                 <div class="nombre">
                     <label for="nombre">Nombre de Usuario</label>
                     <!-- Añadido required porque es necesario un nombre de usuario -->
-                    <input type="text" name="nombre" id="nombre" placeholder="UserName" required><br>
+                    <input type="text" name="nombre" id="UserName" placeholder="UserName" required><br>
                 </div>
 
                 <div class="contraseña"> 
@@ -48,7 +48,7 @@
 
                         <label for="nombre">Apellidos</label>
                         <!-- Añadido required porque los apellidos son obligatorios -->
-                        <input type="text" name="nombre" id="nombre" placeholder="Apellidos" required>
+                        <input type="text" name="nombre" id="apellidos" placeholder="Apellidos" required>
 
                     </div>
 
@@ -66,7 +66,7 @@
     
                         <label for="numero" min="0" max="4000">Código Postal</label>
                         <!-- Añadido required porque el código postal es necesario -->
-                        <input type="text" name="numero" id="numero" placeholder="38XXX" 
+                        <input type="text" name="numero" id="codigo-postal" placeholder="38XXX" 
                         pattern="^\d{5}$" maxlength="5" required>
                         
                     </div>
