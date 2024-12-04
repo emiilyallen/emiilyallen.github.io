@@ -117,10 +117,14 @@ input:focus, textarea:focus, select:focus {
     width: 97%; /* El input ocupa todo el ancho disponible en su contenedor */
 }
 
+input:invalid,
+select:invalid,
+textarea:invalid {
+    border-color: red;
+}
 
 
 /*SEGUNDO CAMPO*/
-
 .datos-personales2{
     display: grid;
     grid-template-columns: auto auto auto; /* El primer elemento (select) ocupa el espacio necesario, el segundo (input) ocupa el resto */
