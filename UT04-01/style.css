@@ -5,16 +5,30 @@
     padding: 0;
 }
 
+
+
+
+.contenedor{
+    display: flex;
+    gap: 20px;
+    padding: 50px;
+    justify-content: center;
+}
+
 /* Estilo del formulario */
 form {
-    margin: 2rem auto; /* Centrar el formulario y dar espacio superior */
+    margin: auto; /* Centrar el formulario y dar espacio superior */
     max-width: 1000px; /* Ajuste el ancho máximo */
     padding: 1.5rem; /* Espaciado interno */
     border: 1px solid #ccc; /* Borde gris claro */
     border-radius: 0.5rem; /* Bordes suaves */
     background-color: #fff; /* Fondo blanco */
     font-family: Arial, sans-serif; /* Fuente estándar y legible */
+
+    /*LADO IZQUIIERDO*/
+    flex: 1;
 }
+
 
 /* Estilo de los fieldsets */
 fieldset {
@@ -58,11 +72,6 @@ input:focus, textarea:focus, select:focus {
     border-color: #333; /* Cambiar el borde al interactuar */
     outline: none; /* Quitar el borde por defecto */
 }
-
-
-
-
-
 
 
 /* Sección de Datos Usuario */
@@ -117,11 +126,31 @@ input:focus, textarea:focus, select:focus {
     width: 97%; /* El input ocupa todo el ancho disponible en su contenedor */
 }
 
-input:invalid,
-select:invalid,
-textarea:invalid {
-    border-color: red;
+
+input {
+    border: 1px solid black; /* Estado inicial */
+    outline: none;
 }
+
+input.error {
+    border: 2px solid red;
+}
+
+input.valid {
+    border: 1px solid black; /* Estado válido */
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: none; /* Ocultar mensaje inicialmente */
+}
+
+.error-message.active {
+    display: block; /* Mostrar mensaje en caso de error */
+    text-align: start;
+}
+
 
 
 /*SEGUNDO CAMPO*/
@@ -132,7 +161,7 @@ textarea:invalid {
     align-items: center; /* Alinea los elementos verticalmente */
 }
 
-#año{
+#anio{
     width: 97%;
 }
 
@@ -183,3 +212,37 @@ span {
     margin-bottom: 10px;
     text-align: end;
   }
+
+
+
+
+
+
+
+
+/* Estilo para los mensajes (lado derecho) */
+.mensajes {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 1000px; /* Ajuste el ancho máximo */
+
+}
+
+.mensajes ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mensajes ul li {
+    color: red;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-size: 0.9em;
+
+}
+
+
